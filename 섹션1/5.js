@@ -45,3 +45,37 @@ function solution2(...list) {
 }
 
 console.log(solution2(5,3,7,11,2,15,17));
+
+
+
+//=================================================
+
+// 내장 함수를  사용하는 방법
+function solution3(...list) {
+    let answer,  min = Math.min(...list)
+
+    for(let i = 0 ; i < list.length ; i++ ){
+        if(min > list[i] ) min = list[i];
+    }
+    answer = min
+    return answer;
+}
+
+console.log(solution3(5,3,7,11,2,15,17));
+
+
+
+//=================================================
+
+// 내장함수를 사용하되, apply prototype method를 사용하는 방법(배열 자체를 인자로 전달하고 싶은 경우)
+function solution4(...list) {
+    let answer,  min = Math.min.apply(null, list) // this 바인딩 인수는 null
+
+    for(let i = 0 ; i < list.length ; i++ ){
+        if(min > list[i] ) min = list[i];
+    }
+    answer = min
+    return answer;
+}
+
+console.log(solution4(5,3,7,11,2,15,17));
