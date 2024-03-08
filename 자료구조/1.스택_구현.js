@@ -1,4 +1,4 @@
-class Stack {
+export class Stack {
   constructor() {
     this.items = [];
   }
@@ -40,16 +40,16 @@ class Stack {
 }
 
 // 스택 사용 예시
-const stack = new Stack();
-console.log(stack.isEmpty()); // true
+// const stack = new Stack();
+// console.log(stack.isEmpty()); // true
 
-stack.push(10);
-stack.push(20);
-stack.push(30);
+// stack.push(10);
+// stack.push(20);
+// stack.push(30);
 
-console.log(stack.printStack()); // 10 20 30
+// console.log(stack.printStack()); // 10 20 30
 
-console.log(stack.peek()); // 30
+// console.log(stack.peek()); // 30
 
-console.log(stack.pop()); // 30
-console.log(stack.printStack()); // 10 20
+// console.log(stack.pop()); // 30
+// console.log(stack.printStack()); // 10 20

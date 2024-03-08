@@ -1,4 +1,4 @@
-class Queue {
+export class Queue {
   constructor() {
     this.items = [];
   }
@@ -40,17 +40,17 @@ class Queue {
   }
 }
 
-// 큐 사용 예시
-const queue = new Queue();
-console.log(queue.isEmpty()); // true
+// // 큐 사용 예시
+// const queue = new Queue();
+// console.log(queue.isEmpty()); // true
 
-queue.enqueue(10);
-queue.enqueue(20);
-queue.enqueue(30);
+// queue.enqueue(10);
+// queue.enqueue(20);
+// queue.enqueue(30);
 
-console.log(queue.printQueue()); // 10 20 30
+// console.log(queue.printQueue()); // 10 20 30
 
-console.log(queue.front()); // 10
+// console.log(queue.front()); // 10
 
-console.log(queue.dequeue()); // 10
-console.log(queue.printQueue()); // 20 30
+// console.log(queue.dequeue()); // 10
+// console.log(queue.printQueue()); // 20 30
