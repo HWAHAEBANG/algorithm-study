@@ -24,3 +24,43 @@ return answer
 }
 
 console.log(solution(5));
+
+
+function practice(n, mul){
+    function subFunc(n){
+        return
+    }
+
+    subFunc(1,1)
+}
+
+console.log(practice1(5));
+
+// ★★★★★★★★★★★★
+function practice1(n, mul){
+    mul = mul || 1
+
+    if(n === 0){
+        return mul;
+    } else {
+        mul *= n
+        return practice1(n-1, mul)
+    }
+
+}
+
+console.log(practice1(5));
+
+
+function practice2(n, mul){
+    mul = mul || 1
+
+    if(n === 0){
+        return mul
+    } else {
+        mul *= n
+        return practice2(n-1, mul)
+    }
+}
+
+console.log('이상무',practice2(5));
