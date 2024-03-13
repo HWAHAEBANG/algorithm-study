@@ -23,3 +23,11 @@ console.log(fibo(5)); // 5
 console.log(fibo(10)); // 55
 // console.log(fibo(100000)); // 55
 
+
+
+function practice1(n){
+  return n <= 1 ? n : practice1(n-1) + practice1(n-2)
+}
+
+console.log(practice1(10));
+console.log(practice1(77));
