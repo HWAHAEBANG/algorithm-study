@@ -32,3 +32,41 @@ function solution2(n){
 }
 
 console.log(solution2(100000));
+
+
+///========================
+
+//for 문사용
+function practice1(n){
+    let dp = []
+    
+    dp[0] = 0
+    dp[1] = 1
+
+    for(let i=2; i<=n; i++){
+        dp[i] = (dp[i-1] + dp[i-2]) % 1234567
+    }
+
+    return dp[n]
+}
+
+console.log(practice1(100000));
+
+
+//값을 재사용
+function practice2(n){
+    let target
+    let first = 0
+    let second = 1
+
+    for(let i=2; i<=n; i++){
+        target = (first + second) % 1234567
+
+        first = second
+        second = target
+    }
+
+    return target
+}
+
+console.log(practice2(100000));
