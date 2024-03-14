@@ -55,3 +55,38 @@ function decimalConvertor(n){
 }
 
 console.log('10진법 변환기',decimalConvertor('1010'));
+
+
+
+function practiceBinary(n){
+    let answer = ''
+
+    function subFunc(L){
+        if(L === 0){
+            return;
+        }else{
+            answer = L % 2 + answer 
+            subFunc(parseInt(L/2))
+        }
+    }
+
+    subFunc(n)
+
+    return answer;
+}
+
+
+console.log('연습이진수', practiceBinary(10));
+
+
+function practiceDecimal(n){
+    let answer = 0
+
+    for(let i=0; i<n.length; i++){
+        answer += n[n.length-1-i] * 2**i
+    }
+
+    return answer
+}
+
+console.log('연습십진수',practiceDecimal('1010'));
