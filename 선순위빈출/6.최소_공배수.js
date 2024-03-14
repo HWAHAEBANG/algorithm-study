@@ -25,3 +25,10 @@ function lcm(a, b){
 }
 
 console.log(lcm(2,5));
+
+
+function practice1 (a, b){
+    return a * b / gcd(a,b)
+}
+
+console.log(practice1(2,5));
