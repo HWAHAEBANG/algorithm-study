@@ -11,3 +11,16 @@ function factorial(n){
 
 console.log(factorial(5));
 
+//★★★★★★★★★★★★★★★★★★
+function practice(n){
+    return n === 1 ? n : n + practice(n-1)
+}
+
+console.log(practice(5));
+
+
+function practice2(n){
+    return n === 1 ? n : n + practice2(n-1)
+}
+
+console.log(practice2(5));
