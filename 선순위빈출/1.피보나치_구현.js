@@ -70,3 +70,34 @@ function practice2(n){
 }
 
 console.log(practice2(100000));
+
+function practice3 (n){
+    let dp = []
+    dp[0] = 0
+    dp[1] = 1
+
+    for(let i=2; i<=n ;i++){
+        dp[i] = (dp[i-1] + dp[i-2]) % 1234567
+    }
+
+    return dp[n]
+}
+
+console.log(practice3(100000));
+
+function practice4(n){
+    let target
+    let first = 0
+    let second = 1
+
+    for(let i=0; i<=n-2; i++){
+        target = (first + second) % 1234567
+
+        first = second
+        second = target
+    }
+
+    return target
+}
+
+console.log(practice4(100000));
