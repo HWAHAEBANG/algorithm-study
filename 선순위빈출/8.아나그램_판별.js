@@ -39,3 +39,24 @@ function practice1(a, b){
 
 console.log(practice1('AbaAeCe', 'baeeACA'));
 console.log(practice1('abaCC', 'Caaab'));
+
+
+function practice2(a,b){
+    let answer = 'yes'
+    let sH = new Map();
+
+    for(let x of a){
+        if(sH.has(x)) sH.set(x, sH.get(x)+1)
+        else sH.set(x, 1)
+    }
+
+    for(let x of b){
+        if(!sH.has(x) || sH.get(x) <= 0) answer = 'no'
+        else sH.set(x, sH.get(x)-1)
+    }
+
+    return answer
+}
+
+console.log(practice2('AbaAeCe', 'baeeACA'));
+console.log(practice2('abaCC', 'Caaab'));
