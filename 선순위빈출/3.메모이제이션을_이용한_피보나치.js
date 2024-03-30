@@ -54,3 +54,14 @@ function practice2(n, memo){
 
 console.log('이상무',practice2(10));
 console.log('이상무',practice2(77));
+
+
+function practice3(n, memo){
+ memo = memo || {}
+
+ if(memo[n]) return memo[n]
+ return n <= 1 ? n : memo[n] = practice3(n-1, memo) + practice3(n-2, memo)
+}
+
+console.log('이상무',practice3(10));
+console.log('이상무',practice3(77));
