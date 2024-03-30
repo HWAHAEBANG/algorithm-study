@@ -18,3 +18,15 @@ function practice1(a, b){
 }
 
 console.log(practice1(24,48));
+
+function practice2(a, b){
+    let remain = a % b
+
+    // if(remain === 0 ) return b
+
+    // return practice(b, remain)
+
+    return remain === 0 ? b : practice2(b, remain)
+}
+
+console.log(practice2(24,24));
