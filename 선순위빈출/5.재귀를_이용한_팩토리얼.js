@@ -36,7 +36,7 @@ function practice(n, mul){
 
 console.log(practice1(5));
 
-// ★★★★★★★★★★★★
+// ★★★★★★★★★★★★ 지금보니 이상
 function practice1(n, mul){
     mul = mul || 1
 
@@ -63,4 +63,12 @@ function practice2(n, mul){
     }
 }
 
-console.log('이상무',practice2(5));
+console.log('이상무',practice2(20));
+
+
+// ★★★★★★★★★★★★// ★★★★★★★★★★★★// ★★★★★★★★★★★★
+function practice3 (n){
+    return n === 1 ? 1 : practice3(n-1)*n
+}
+
+console.log('이상무',practice3(20));
