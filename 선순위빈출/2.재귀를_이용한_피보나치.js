@@ -31,3 +31,10 @@ function practice1(n){
 
 console.log(practice1(10));
 console.log(practice1(77));
+
+function practice2 (n){
+  return n <= 1 ? n : practice2(n-1) + practice2(n-2);
+}
+
+console.log(practice2(10));
+console.log(practice3(77));
