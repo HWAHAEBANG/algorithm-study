@@ -65,3 +65,13 @@ function practice3(n, memo){
 
 console.log('이상무',practice3(10));
 console.log('이상무',practice3(77));
+
+function practice4(n, memo){
+  memo = memo || {}
+
+  if(memo[n]) return memo[n]
+  return n <= 1 ? n : practice4(n-1, memo) + practice4(n-2, memo) 
+}
+
+console.log('하이',practice3(10));
+console.log('하이',practice3(77));
