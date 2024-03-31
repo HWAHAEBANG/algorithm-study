@@ -72,3 +72,10 @@ function practice3 (n){
 }
 
 console.log('이상무',practice3(20));
+
+
+function practice4(n){
+    return n === 1 ? n : n*practice4(n-1)
+}
+
+console.log('하이',practice4(20));
