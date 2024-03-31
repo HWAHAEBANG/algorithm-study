@@ -37,4 +37,10 @@ function practice2 (n){
 }
 
 console.log(practice2(10));
+
+function practice3(n){
+  return n <= 1 ? n : practice3(n-1) + practice3(n-2) 
+}
+
+console.log(practice3(10));
 console.log(practice3(77));
