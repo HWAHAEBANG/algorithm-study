@@ -21,3 +21,15 @@ function practice1(n){
 }
 
 console.log(practice1(5));
+
+function practice2(n){
+    let answer = 1
+
+    for(let i=2; i<=n; i++){
+        answer *= i
+    }
+
+    return answer
+}
+
+console.log(practice2(5))
