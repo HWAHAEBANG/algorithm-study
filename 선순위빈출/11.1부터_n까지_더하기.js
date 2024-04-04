@@ -37,3 +37,12 @@ console.log(practice2(5));
 function practice3(n){
     return n === 1 ? n : n + practice3(n-1);
 }
+
+console.log(practice3(5));
+
+
+function practice4(n){
+    return n === 1 ? n : practice4(n-1) + n
+}
+
+console.log('하이',practice4(5));
