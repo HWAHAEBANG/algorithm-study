@@ -39,3 +39,9 @@ function practice2 (a,b){
 }
 
 console.log(practice2(2,5));
+
+
+function practice3(a,b){
+    return a * b / gcd(a,b)
+}
+console.log(practice3(2,5));
