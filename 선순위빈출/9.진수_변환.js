@@ -146,3 +146,47 @@ function practiceDecimal1(n){
 }
 
 console.log('연습십진수',practiceDecimal('1010'));
+
+//===========================================================================
+
+// 10진수 => 2진수
+console.log(dec.toString(2));
+
+// 10진수 => 8진수
+console.log(dec.toString(8));
+
+// 10진수 => 16진수
+console.log(dec.toString(16));
+
+// 16 진수 => 2진수 (10진수로 바꿨다가 2진수로)
+parseInt(hex, 16).toString(2);
+
+// 16진수 => 10진수
+parseInt(hex, 16);
+
+// 2진수 10진수
+parseInt(bin, 2);
+
+// 2진수 16진수 (10주로 바꿨다가 16진수로)
+parseInt(bin, 2).toString(16);
+
+// 이진수 변환기
+function practiceBinary2(n){
+    return n <= 1 ? n.toString() : practiceBinary2(parseInt(n/2)) +  n%2
+}
+
+console.log('연습이진수2', practiceBinary2(10));
+
+// 십진수 변환기
+function practiceDecimal2(n){
+    let answer = 0
+
+    for(let i=0; i<n.length ;i++){
+        answer += parseInt(n[n.length-i-1])*2**i
+    }
+
+    return answer
+}
+
+console.log('연습십진수2',practiceDecimal2('1010'));
+
